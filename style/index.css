@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --main-color:#00DD00;
+    --yellow:#F5B453;
+    --green:#1EC31E;
+    --red: #BE4141;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+ul.reset,
+ul.reset li,
+ul.reset ul li {
+   margin:0;
+   padding: 0;
+   text-indent: 0;
+   list-style-type: none;
+}
+
+#page-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#page-container > #image-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#page-container > #content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    padding: 100px 80px;
+    border-radius: 18px;
+    z-index: 2;
+    overflow: hidden;
+}
+#page-container > #content > #bg-opacity{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+#page-container > #content > #header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#page-container > #content > #header >.img{
+    width: 240px;
+    height: 110px;
+}
+#page-container > #content > #header > .title{
+    margin: 0;
+    margin-top: 10px;
+    color: var(--main-color);
+}
+#page-container > #content > #header > .nav{
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    background: var(--main-color);
+}
+#page-container > #content > #header > .nav > .list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#page-container > #content > #header > .nav > .list > .list-item{
+    margin: 0 5px;
+}
+#page-container > #content > #section-scooters > #form >.list >.list-item{
+   margin: 40px 0;
+   color: white;
+}
+#page-container > #content > #section-scooters > #form >.list >.list-item>.header > .label{
+    margin: 0;
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: bold;
+}
+#page-container > #content > #section-scooters > #form >.list >.list-item>.text{
+    position: relative;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+#page-container > #content > #section-scooters > #form >.list >.list-item>.text::before{
+    content:"↦";
+    position: absolute;
+    left: 0;
+    transform: translateX(-20px);
+}
+
+#page-container > #content > #section-scooters > #form >.list >.list-item>.wrapper-charge-status>.text{
+    margin: 0;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+#page-container > #content > #section-scooters > #form >.list >.list-item>.wrapper-charge-status>.charge-status{
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#page-container > #content > #section-scooters > #form >.list >.list-item>.wrapper-charge-status>.charge-status.yellow{
+    width: 30%;
+    background: var(--yellow);
+}
+#page-container > #content > #section-scooters > #form >.list >.list-item>.wrapper-charge-status>.charge-status.green{
+    width: 50%;
+    background: var(--green);
+}
+#page-container > #content > #section-scooters > #form >.list >.list-item>.wrapper-charge-status>.charge-status.red{
+    width: 10%;
+    background: var(--red);
+}
